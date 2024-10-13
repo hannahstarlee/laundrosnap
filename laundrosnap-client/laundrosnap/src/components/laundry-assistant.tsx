@@ -61,7 +61,7 @@ export function LaundryAssistantComponent() {
     <>
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogTrigger asChild>
-          <Button className="fixed bottom-20 right-4 rounded-full z-50" size="icon">
+          <Button className="fixed top-4 right-4 rounded-full z-50" size="icon">
             <Bot className="h-6 w-6" />
           </Button>
         </DialogTrigger>
@@ -114,7 +114,7 @@ export function LaundryAssistantComponent() {
 
       <Dialog>
         <DialogTrigger asChild>
-          <Button variant="outline" className="fixed bottom-20 left-4 rounded-full z-50 bg-opacity-100" size="icon">
+          <Button variant="outline" className="fixed top-4 left-4 rounded-full z-50 bg-opacity-100" size="icon">
             <div className="">
               <User className="h-6 w-6" />
             </div>

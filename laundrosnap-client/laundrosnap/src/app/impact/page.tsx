@@ -94,14 +94,14 @@ export default function ImpactPage() {
           </DialogHeader>
           <div className="grid gap-4 py-4">
             <div className="grid grid-cols-2 items-center gap-4">
-              <img src="/placeholder.svg?height=100&width=100&text=Cora+Ball" alt="Cora Ball" className="rounded-lg" />
+              <img src="/OIP.jpg?height=100&width=100&text=Cora+Ball" alt="Cora Ball" className="rounded-lg" />
               <div>
                 <h3 className="font-semibold">Cora Ball</h3>
                 <p className="text-sm text-gray-500">Catches microfibers in your wash</p>
               </div>
             </div>
             <div className="grid grid-cols-2 items-center gap-4">
-              <img src="/placeholder.svg?height=100&width=100&text=Guppyfriend" alt="Guppyfriend Bag" className="rounded-lg" />
+              <img src="/guppyfriend.jpg?height=100&width=100&text=Guppyfriend" alt="Guppyfriend Bag" className="rounded-lg" />
               <div>
                 <h3 className="font-semibold">Guppyfriend Bag</h3>
                 <p className="text-sm text-gray-500">Washing bag that captures microfibers</p>

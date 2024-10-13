@@ -8,17 +8,20 @@ import { Label } from "@/components/ui/label"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Loader2 } from "lucide-react"
+import { useRouter } from "next/navigation";
 
 
 export default function AuthPage() {
+    const router = useRouter()
     const [isLoading, setIsLoading] = React.useState<boolean>(false)
 
     async function onSubmit(event: React.SyntheticEvent) {
-        event.preventDefault()
-        setIsLoading(true)
+        event.preventDefault();
+        setIsLoading(true);
 
         setTimeout(() => {
-            setIsLoading(false)
+            setIsLoading(false);
+            router.push("/home");
         }, 3000)
     }
 
