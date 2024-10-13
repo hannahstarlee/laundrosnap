@@ -13,6 +13,17 @@ import { LaundryFooter } from "@/components/footer"
 
 const trendingTags = ["#LaundryDay", "#FreshAndClean", "#LaundryHacks", "#CollegeLaundry", "#LaundryArt"]
 
+const suggestedPosts = [
+  "/image9.jpg",
+  "/image10.webp",
+  "/image11.webp",
+  "/image12.webp",
+  "/image13.jpg",
+  "/image14.jpg",
+  "/image15.jpg",
+  "/image16.jpg",
+];
+
 const suggestedUsers = [
   { id: 1, name: "LaundryPro", avatar: "/placeholder.svg?height=40&width=40", streak: 15 },
   { id: 2, name: "CleanQueen", avatar: "/placeholder.svg?height=40&width=40", streak: 12 },
@@ -58,9 +69,9 @@ export default function ExplorePage() {
             </Card>
             <ScrollArea className="h-[calc(100vh-300px)] mt-4">
               <div className="grid grid-cols-2 gap-2">
-                {[...Array(10)].map((_, index) => (
+                {suggestedPosts.map((url, index) => (
                   <Card key={index} className="overflow-hidden">
-                    <img src={`/placeholder.svg?height=150&width=150&text=Trending+${index + 1}`} alt={`Trending ${index + 1}`} className="w-full h-auto" />
+                    <img src={`${url}?height=150&width=150&text=Trending+${index + 1}`} alt={`Trending ${index + 1}`} className="w-full aspect-square" />
                   </Card>
                 ))}
               </div>

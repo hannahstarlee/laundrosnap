@@ -17,6 +17,20 @@ type Message = {
   sender: 'user' | 'bot'
 }
 
+const chatResponse = async (prompt: string): Promise<string> => {
+  const base = "You are an all knowing laundry chat bot. Answer the following user provided question to the best of your ability with a focus on environmental consciousness. ";
+  // append
+  const fullPrompt = base + prompt;
+
+  const encoded = encodeURIComponent(fullPrompt);
+
+  const response = await fetch(`https://snowy-forest-d7dd.albertdu369.workers.dev/?prompt=${encoded}`);
+  if (!response.ok) {
+    throw new Error("Failed to fetch response from chatbot");
+  }
+  
+}
+
 export function LaundryAssistantComponent() {
   const [messages, setMessages] = useState<Message[]>([
     { id: 1, text: "Hi there! I'm your LaundroSnap assistant. How can I help you with your laundry today?", sender: 'bot' }
