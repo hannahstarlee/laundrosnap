@@ -46,6 +46,8 @@ namespace LaundroSnapServer.Controllers
             return res;
         }
 
+        public async Task<ActionResult<int>> CurrentStreak()
+
     }
     public record UserCreationRequest
     {
