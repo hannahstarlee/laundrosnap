@@ -116,7 +116,7 @@ export function LaundryAssistantComponent() {
         <DialogTrigger asChild>
           <Button variant="outline" className="fixed bottom-20 left-4 rounded-full z-50 bg-opacity-100" size="icon">
             <div className="">
-              <User className="!bg-rose-500 h-6 w-6" />
+              <User className="h-6 w-6" />
             </div>
           </Button>
         </DialogTrigger>
