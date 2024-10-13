@@ -18,7 +18,7 @@ type Message = {
 }
 
 const chatResponse = async (prompt: string): Promise<string> => {
-  const base = "You are an all knowing laundry chat bot. Answer the following user provided question to the best of your ability with a focus on environmental consciousness. ";
+  const base = "You are an all knowing laundry chat bot in an app called LaundroSnap. Answer the following user provided question to the best of your ability with a focus on environmental consciousness. Do not use any special formatting. At maximum, answer in a few sentences. Do not introduce yourself. - ";
   // append
   const fullPrompt = base + prompt;
 
@@ -28,7 +28,11 @@ const chatResponse = async (prompt: string): Promise<string> => {
   if (!response.ok) {
     throw new Error("Failed to fetch response from chatbot");
   }
+  const json = await response.json();
   
+  const responseText = json[0].response.response;
+  console.log(responseText);
+  return responseText;
 }
 
 export function LaundryAssistantComponent() {
@@ -45,30 +49,29 @@ export function LaundryAssistantComponent() {
     }
   }, [messages])
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (input.trim()) {
       const newMessage: Message = { id: messages.length + 1, text: input, sender: 'user' }
       setMessages([...messages, newMessage])
       setInput('')
-      // Simulate bot response
-      setTimeout(() => {
-        const botResponse: Message = { id: messages.length + 2, text: getBotResponse(input), sender: 'bot' }
-        setMessages(prevMessages => [...prevMessages, botResponse])
-      }, 1000)
+
+      const botResponse: Message = { id: messages.length + 2, text: await getBotResponse(input), sender: 'bot' }
+      setMessages(prevMessages => [...prevMessages, botResponse])
     }
   }
 
-  const getBotResponse = (userInput: string): string => {
+  const getBotResponse = (userInput: string): Promise<string> => {
     const lowerInput = userInput.toLowerCase()
-    if (lowerInput.includes('detergent')) {
-      return "For eco-friendly options, I recommend Seventh Generation or Method. If you're dealing with tough stains, try Tide or Persil. Remember to check if your machine is HE (High Efficiency) compatible!"
-    } else if (lowerInput.includes('softener')) {
-      return "Downy and Snuggle are popular choices. For a more natural option, try using white vinegar in the fabric softener compartment. It's great for softening clothes and reducing static!"
-    } else if (lowerInput.includes('stain')) {
-      return "For most stains, pre-treat with a stain remover like OxiClean or Shout. For grease stains, try using dish soap before washing. Always check the care label before treating!"
-    } else {
-      return "I'm here to help with any laundry questions! Feel free to ask about detergents, stain removal, or laundry tips."
-    }
+    // if (lowerInput.includes('detergent')) {
+    //   return "For eco-friendly options, I recommend Seventh Generation or Method. If you're dealing with tough stains, try Tide or Persil. Remember to check if your machine is HE (High Efficiency) compatible!"
+    // } else if (lowerInput.includes('softener')) {
+    //   return "Downy and Snuggle are popular choices. For a more natural option, try using white vinegar in the fabric softener compartment. It's great for softening clothes and reducing static!"
+    // } else if (lowerInput.includes('stain')) {
+    //   return "For most stains, pre-treat with a stain remover like OxiClean or Shout. For grease stains, try using dish soap before washing. Always check the care label before treating!"
+    // } else {
+    //   return "I'm here to help with any laundry questions! Feel free to ask about detergents, stain removal, or laundry tips."
+    // }
+    return chatResponse(lowerInput);
   }
 
   return (
