@@ -22,7 +22,6 @@ laundrosnap is a app created to bring awareness to microfiber pollution caused b
   <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/078/731/datas/original.png" width="200" />
   <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/078/921/datas/original.png" width="200" />
   <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/078/924/datas/original.png" width="200" />
-  <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/078/971/datas/original.png" width="200" />
 </p>
 
 <p float="left">
