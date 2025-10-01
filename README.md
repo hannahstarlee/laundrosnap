@@ -3,7 +3,7 @@ laundrosnap is a app created to bring awareness to microfiber pollution caused b
 
 ---
 
-## 𐙚🧸ྀི idea
+## idea 𐙚🧸ྀི
 - turn laundry into a social and interactive experience  
 - raise awareness about microfiber pollution through education and visuals  
 - motivate users to adopt sustainable laundry habits in a simple way  
