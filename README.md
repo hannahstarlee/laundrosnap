@@ -10,13 +10,13 @@ laundrosnap is a app created to bring awareness to microfiber pollution caused b
 
 ---
 
-## 𐙚🧸ྀི built with
+## 𐙚 built with
 - **frontend:** next.js, react, tailwindcss, shadcn/ui, lucide icons  
 - **backend:** node.js, mongodb  
 - **ai:** meta llama model for a laundry assistant  
 
 ---
-## 𐙚🧸ྀི screenshots
+## 𐙚 screenshots
 
 <p float="left">
   <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/078/731/datas/original.png" width="200" />
