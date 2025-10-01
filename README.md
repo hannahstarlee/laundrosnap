@@ -1,5 +1,5 @@
 # 🧺 laundrosnap
-laundrosnap is a app created to bring awareness to microfiber pollution caused by everyday laundry. every year, over 500,000 tons of microfibers (the equivalent of 50 billion plastic bottles) enter our oceans. most people don’t realize this invisible problem, and we wanted to make learning about it engaging and social.
+laundrosnap is an app created to bring awareness to microfiber pollution caused by everyday laundry. every year, over 500,000 tons of microfibers (the equivalent of 50 billion plastic bottles) enter our oceans. most people don’t realize this invisible problem, and we wanted to make learning about it engaging and social.
 
 ---
 
